@@ -4,9 +4,9 @@ import './NavBar.scss'
 const NavBar = () => {
     return (
         <div className='Container'>
-            <a href='/SignIn'>Sign in</a>
+            <a href='/authorization/signIn'>Signin</a>
             <span className='Container-divider'>|</span>
-            <a href='/SignUp'>Sign up</a>
+            <a href='/authorization/signUp'>Signup</a>
         </div>
     );
 }

@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
 .Container {
   display: flex;
   justify-content: flex-end;
@@ -12,9 +18,9 @@
     }
   }
   &-divider {
-    font-size: 18px;
+    font-size: 22px;
     color: white;
-    margin-top: 12px;
+    margin-top: 10px;
     font-weight: bold;
   }
 }
