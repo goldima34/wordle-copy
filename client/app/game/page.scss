@@ -1,0 +1,128 @@
+$gray: #828384;
+$dark-gray: #121213;
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.cell {
+  width: 62px;
+  height: 62px;
+  border: 1px solid $gray;
+  margin: 2px;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.keyboard-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.keyboard-row {
+  display: grid;
+  justify-content: center;
+  &:nth-child(1) {
+    grid-template-columns: repeat(10, 50px);
+  }
+
+  &:nth-child(2) {
+    grid-template-columns: repeat(9, 50px);
+  }
+
+  &:nth-child(3) {
+    grid-template-columns: repeat(9, 50px);
+  }
+}
+
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 55px;
+  background-color: $gray;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  font-size: 1.25em;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+.backspace {
+  height: 50px;
+  height: 55px;
+  padding: 0px 10px;
+  fill: white;
+}
+
+.enter {
+  height: 50px;
+  margin-left: -20px;
+  height: 55px;
+  padding: 0px 10px;
+  font-size: 11px;
+}
+
+.notification {
+  color: white;
+  position: absolute;
+  background-color: $gray;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 5px;
+  top: 10px;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+}
+
+.notification.show {
+  opacity: 1;
+  visibility: visible;
+  animation: slide-in 0.5s forwards;
+}
+
+.notification.hide {
+  opacity: 0;
+  visibility: hidden;
+  animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) translateY(30%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
